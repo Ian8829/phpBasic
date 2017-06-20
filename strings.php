@@ -1,10 +1,12 @@
 <?php
 $name = 'Alena';
 $string_one = "Hello?? \$name";
-// Hello?? $name
-
-$string_two = "Hello?? \"$name\" ";
-// Hello?? "Alena"
+$string_two = 'Learning to display ';
+$string_two .= '"Hello ';
+$string_two .= $name;
+$string_two .= '!" to the screen.';
+$string_two .= "\n";
+// $string_one = $string_one . "\n";
 
 echo $string_two;
 
