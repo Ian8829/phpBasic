@@ -1,10 +1,14 @@
 <?php
+$string_one = "";
 
-$a = 10;
-$b = '10';
-var_dump($a == $b);
-var_dump($a === $b);
-var_dump($string_one === 'Learning to display "Hello" to the screen.');
+if ($string_one == 'Learning????') {
+    echo 'The value is matched';
+} elseif ($string_one == "") {
+    echo '$string_one is empty';
+} else {
+    echo 'the values DO NOT match.';
+}
+
 ?>
 
 
