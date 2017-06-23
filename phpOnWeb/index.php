@@ -36,7 +36,11 @@ $display_name = 'Alena';
         </section>
     </div>
     <section class="footer text-center">
-      &copy; 2016 <?php echo $display_name; ?>
+      &copy; <?php
+        echo date('Y');
+        echo " " .$display_name. ". ";
+        echo "Last modified: " .date ("F d Y H: i:s.", getlastmod());
+        ?>
     </section>
   </body>
 </html>
