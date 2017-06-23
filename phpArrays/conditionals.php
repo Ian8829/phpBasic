@@ -1,4 +1,13 @@
 <?php
+
+$var1 = true && false;
+// bool(false)
+$var2 = true and false;
+// bool(true)
+
+var_dump($var1, $var2);
+
+/*
 $num = '11';
 
 if ($num == 10 || is_string($num)) {
@@ -6,6 +15,7 @@ if ($num == 10 || is_string($num)) {
 } else {
     echo ' NOT 10 or string';
 }
+/*
 
 /*
 if ($num >= 10 && $num <= 1000) {
