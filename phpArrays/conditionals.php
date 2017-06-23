@@ -1,15 +1,19 @@
 <?php
-$num = 1;
+$num = '11';
 
-if ($num >= 10) {
-    if ($num <= 1000) {
-        echo 'your number is within the range';
-    } else {
-        echo 'your number is greater than 1000, NOT within the range';
-    }
+if ($num == 10 || is_string($num)) {
+    echo '10 or string';
+} else {
+    echo ' NOT 10 or string';
+}
+
+/*
+if ($num >= 10 && $num <= 1000) {
+    echo 'your number is within the range';
 } else {
     echo ' your number is less than 10, NOT within the range';
 }
+*/
 
 /*
 $a = 0;
