@@ -1,22 +1,48 @@
 <?php
-$a = 5;
+$a = 0;
 $b = 8;
 
+
 if ($a == $b) {
-    echo ' values are equal ';
-} elseif ($a < $b) {
-    echo ' $a is less than $b';
-} elseif ($a > $b) {
-    echo ' $a is greater than $b';
+    echo 'values are equal ';
 } else {
-    echo ' values are NOT equal ';
+    echo 'values are NOT equal ';
 }
 
-$score = 57;
-
-if ($score >= 59) {
-    echo 'You completed the level1';
-} else {
-    echo 'Please try again';
+if (($a == $b) == false) {
+    echo 'values are NOT equal ';
 }
+
+if ($a <> $b) {
+    echo 'values are NOT equal ';
+}
+// not equal
+
+if ($a != $b) {
+    echo 'values are NOT equal ';
+}
+
+if ($a !== $b) {
+    echo 'values are NOT identical ';
+}
+// not identical
+
+if ($a) {
+    echo ' true';
+}
+
+if (!$a) {
+    echo ' false';
+}
+
+if ($a == false) {
+    echo ' false';
+}
+
+if ($a != true) {
+    echo ' false';
+}
+
 ?>
+
+
