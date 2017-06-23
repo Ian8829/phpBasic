@@ -8,7 +8,23 @@ array_push($learn, 'Functions', 'Forms', 'Objects');
 // from end of the array
 
 array_unshift($learn, 'HTML', 'CSS');
-// from first of the array
+// from beginning of the array
+
+echo 'you removed ' . array_pop($learn);
+// remove from end of the array
+
+echo 'you removed ' . array_shift($learn);
+// remove from beginning of the array
+
+unset($learn[1], $learn[2]);
+// unset a given var
+
+$learn = array_values($learn);
+// refresh array key(from unset destroying array key)
+
+unset($learn);
+// unset all
+
 
 var_dump($learn);
 //echo $learn[0];
