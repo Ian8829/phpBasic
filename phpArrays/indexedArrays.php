@@ -22,9 +22,8 @@ unset($learn[1], $learn[2]);
 $learn = array_values($learn);
 // refresh array key(from unset destroying array key)
 
-unset($learn);
-// unset all
-
+//$learn = 'my learning list';
+$learn[0] = 'Email';
 
 var_dump($learn);
 //echo $learn[0];
