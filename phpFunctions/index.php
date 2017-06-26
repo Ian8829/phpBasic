@@ -1,12 +1,15 @@
 <?php
 
-function getInfo($name, $title = Null) {
-  if ($title) {
-    echo "$name has arrived, they are with us as a $title";
-  } else {
-    echo "$name has arrived, welcome!!";
-  }
+function addUp($a, $b) {
+  $arr = [
+    $a,
+    $b,
+    $a + $b
+  ];
+  return $arr;
 }
 
-//getInfo('Mike', 'frog');
-getInfo('Mike');
+$value = addUp(2, 4);
+
+//print_r($value);
+echo $value[2];
