@@ -1,6 +1,12 @@
 <?php
-//$currentYear = date('Y');
-//$year = $currentYear - 20;
+
+for (
+  $year = date('Y') - 100;
+  $year <= date('Y');
+  $year++
+) {
+  echo $year . "<br/>\n";
+}
 
 //while (++$year <= $currentYear) {
 //  echo $year . "<br/>\n";
@@ -18,7 +24,6 @@ asort($learn);
 
 $count = 0;
 
-while ((list($key, $val) = each($learn)) && $count++ < 2) {
-  echo "$key => $val\n";
-}
+//while ((list($key, $val) = each($learn)) && $count++ < 2) {
+//  echo "$key => $val\n";
 
