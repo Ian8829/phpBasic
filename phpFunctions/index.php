@@ -1,16 +1,10 @@
 <?php
 
-function answer() {
-  return 42;
-}
+$name = 'Allison';
 
-function addUp($a, $b) {
-  return $a + $b;
-}
+$greet = function() use($name){
+  // use($name) means that closure definition
+  echo "Hello $name!";
+};
 
-//$func = 'answer';
-$func = 'addUp';
-
-$num = $func(5, 7);
-
-echo $num;
+$greet();
