@@ -1,15 +1,16 @@
 <?php
 
-function addUp($a, $b) {
-  $arr = [
-    $a,
-    $b,
-    $a + $b
-  ];
-  return $arr;
+function answer() {
+  return 42;
 }
 
-$value = addUp(2, 4);
+function addUp($a, $b) {
+  return $a + $b;
+}
 
-//print_r($value);
-echo $value[2];
+//$func = 'answer';
+$func = 'addUp';
+
+$num = $func(5, 7);
+
+echo $num;
