@@ -8,8 +8,10 @@ $iceCream = array(
 
 $iceCream['alena'] = 'Pistachio';
 $iceCream['Dave Thomas'] = 'Cookie Dough';
-$iceCream[] = 'Vanilla';
+//$iceCream[] = 'Vanilla';
 $iceCream['Andrew'] = true;
+krsort($iceCream);
+asort($iceCream);
 var_dump($iceCream);
 
 $keys = [

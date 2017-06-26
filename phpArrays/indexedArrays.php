@@ -10,11 +10,19 @@ array_push($learn, 'Functions', 'Forms', 'Objects');
 array_unshift($learn, 'HTML', 'CSS');
 // from beginning of the array
 
-echo 'you removed ' . array_pop($learn);
-// remove from end of the array
+ksort($learn);
+sort($learn);
+rsort($learn);
+var_dump($learn);
 
-echo 'you removed ' . array_shift($learn);
-// remove from beginning of the array
+shuffle($learn);
+echo $learn[0];
+
+//echo 'you removed ' . array_pop($learn);
+//// remove from end of the array
+//
+//echo 'you removed ' . array_shift($learn);
+//// remove from beginning of the array
 
 unset($learn[1], $learn[2]);
 // unset a given var
