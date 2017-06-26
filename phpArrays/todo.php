@@ -1,9 +1,17 @@
 <?php
 include 'list.php';
 
+$order = [];
 foreach ($list as $key => $item) {
-  echo $key . ' = ' . $item['title'] . "<br/>\n";
+  if ($item['complete']) {
+    $order[] = $key;
+  }
 }
+
+//var_dump($order);
+//var_dump($list);
+
+
 
 echo '<table>';
 echo '<tr>';
@@ -13,13 +21,13 @@ echo '<th>Due Date</th>';
 echo '<th>Complete</th>';
 echo '</tr>';
 
-foreach ($list as $item) {
+foreach ($order as $id) {
   echo '<tr>';
-  echo '<td>' . $item['title'] . "</td>\n";
-  echo '<td>' . $item['priority'] . "</td>\n";
-  echo '<td>' . $item['due'] . "</td>\n";
+  echo '<td>' . $list[$id]['title'] . "</td>\n";
+  echo '<td>' . $list[$id]['priority'] . "</td>\n";
+  echo '<td>' . $list[$id]['due'] . "</td>\n";
   echo '<td>';
-  if ($item['complete']) {
+  if ($list[$id]['complete']) {
     echo 'Yes';
   } else {
     echo 'No!';
