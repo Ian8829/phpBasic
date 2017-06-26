@@ -1,17 +1,21 @@
 <?php
 include 'list.php';
 
-$order = [];
-foreach ($list as $key => $item) {
-  if ($item['complete']) {
-    $order[] = $key;
-  }
-}
+$status = 'all';
 
+$order = [];
+
+if ($status == 'all') {
+  $order = array_keys($list);
+} else {
+    foreach ($list as $key => $item) {
+      if ($item['complete'] == $status) {
+        $order[] = $key;
+      }
+    }
+}
 //var_dump($order);
 //var_dump($list);
-
-
 
 echo '<table>';
 echo '<tr>';
