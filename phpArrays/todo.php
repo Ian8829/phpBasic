@@ -2,6 +2,7 @@
 include 'list.php';
 
 $status = 'all';
+$field = 'title';
 
 $order = [];
 
@@ -14,8 +15,18 @@ if ($status == 'all') {
       }
     }
 }
-//var_dump($order);
-//var_dump($list);
+
+if ($field) {
+  $sort = [];
+  foreach ($order as $id) {
+    $sort[$id] = $list[$id][$field];
+  }
+  asort($sort);
+  $order = array_keys($sort);
+}
+
+var_dump($sort);
+var_dump($list);
 
 echo '<table>';
 echo '<tr>';
