@@ -1,17 +1,8 @@
 <?php
 
-function hello($arr) {
-  if (is_array($arr)) {
-    foreach($arr as $name)
-    echo "Bonsoir..?? $name" . "<br/>\n";
-  } else {
-    echo "Hello, friends!";
-  }
+function getInfo($name, $title) {
+  echo "$name has arrived, they are with us as a $title";
 }
 
-$name = [
-  'Hampton',
-  'Mike',
-  'Allison'
-];
-hello($name);
+getInfo('Mike', 'frog');
+//getInfo('Mike');
