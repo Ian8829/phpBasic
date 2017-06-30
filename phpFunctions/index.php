@@ -1,10 +1,17 @@
 <?php
 
-$name = 'Allison';
+$phrase = "We only hit what we aim for";
 
-$greet = function() use($name){
-  // use($name) means that closure definition
-  echo "Hello $name!";
-};
+$len = strlen($phrase);
 
-$greet();
+//echo $len;
+
+// substr
+//echo substr($phrase, 0, 5);
+
+// strpos
+//echo strpos($phrase, 'hit');
+//var_dump(strpos($phrase, 'bob'));
+
+$start = strpos($phrase, 'hit');
+echo substr($phrase, $start);
